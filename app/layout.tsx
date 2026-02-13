@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Smart Bookmarks App",
-  description: "smart bookmark app by Hanna.",
+  description: "smart bookmark app by Hanna",
 };
 
 export default function RootLayout({
