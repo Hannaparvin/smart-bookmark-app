@@ -1,18 +1,18 @@
-📌 Smart Bookmark App
+📌 Smart Bookmark App /n
 A full-stack bookmark manager built with Next.js + Supabase + Google OAuth and deployed on Vercel.
 
-🌍 Live Demo
+🌍 Live Demo /n
 🔗<a> https://smart-bookmark-app-black.vercel.app </a>
 
-📖 Project Overview
-This project is a secure bookmark manager where users can:
-Sign in using Google
-Add bookmarks (title + URL + Site logo)
-View personal bookmarks
-Delete bookmarks
-Get real-time updates
-Access their data securely from anywhere
-Each user can only see their own bookmarks thanks to Supabase Row Level Security (RLS).
+📖 Project Overview /n
+This project is a secure bookmark manager where users can: /n
+Sign in using Google /n
+Add bookmarks (title + URL + Site logo)/n
+View personal bookmarks /n
+Delete bookmarks /n
+Get real-time updates /n
+Access their data securely from anywhere /n
+Each user can only see their own bookmarks thanks to Supabase Row Level Security (RLS). /n
 
 
 🛠 Tech Stack
@@ -25,11 +25,11 @@ Each user can only see their own bookmarks thanks to Supabase Row Level Security
 | Version Control | Git + GitHub                          |
 
 
-Problems Faced & How I Solved Them
-----------------------------------------------
-This section explains the real learning journey while building the app.
-
-1.Google OAuth Was Confusing
+Problems Faced & How I Solved Them /n
+---------------------------------------------- /n
+This section explains the real learning journey while building the app./n
+<br>
+1.Google OAuth Was Confusing /n
 
 What happened:
 Google login didn’t work at first because OAuth setup involves both Google Cloud and Supabase settings.
