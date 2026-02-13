@@ -1,4 +1,4 @@
-📌 Smart Bookmark App </n>
+📌 Smart Bookmark App <br>
 A full-stack bookmark manager built with Next.js + Supabase + Google OAuth and deployed on Vercel.
 
 🌍 Live Demo /n
@@ -27,7 +27,7 @@ Each user can only see their own bookmarks thanks to Supabase Row Level Security
 
 Problems Faced & How I Solved Them /n
 ---------------------------------------------- /n
-This section explains the real learning journey while building the app./n
+This section explains the real learning journey while building the app.
 <br>
 1.Google OAuth Was Confusing /n
 
