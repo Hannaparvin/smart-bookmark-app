@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📌 Smart Bookmark App
+A full-stack bookmark manager built with Next.js + Supabase + Google OAuth and deployed on Vercel.
 
-## Getting Started
+🌍 Live Demo
+🔗<a> https://smart-bookmark-app-black.vercel.app </a>
 
-First, run the development server:
+📖 Project Overview
+This project is a secure bookmark manager where users can:
+Sign in using Google
+Add bookmarks (title + URL + Site logo)
+View personal bookmarks
+Delete bookmarks
+Get real-time updates
+Access their data securely from anywhere
+Each user can only see their own bookmarks thanks to Supabase Row Level Security (RLS).
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🛠 Tech Stack
+| Layer           | Technology                            |
+| --------------- | ------------------------------------- |
+| Frontend        | Next.js (App Router) + Tailwind CSS   |
+| Backend         | Supabase (Database + Auth + Realtime) |
+| Authentication  | Google OAuth                          |
+| Deployment      | Vercel                                |
+| Version Control | Git + GitHub                          |
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Problems Faced & How I Solved Them
+----------------------------------------------
+This section explains the real learning journey while building the app.
 
-## Learn More
+1.Google OAuth Was Confusing
 
-To learn more about Next.js, take a look at the following resources:
+What happened:
+Google login didn’t work at first because OAuth setup involves both Google Cloud and Supabase settings.
+Things that confused me:
+Creating the OAuth consent screen
+Redirect URLs
+Difference between JavaScript Origins and Redirect URIs
+How I fixed it:
+After understanding the flow, I configured:
+Authorized JavaScript Origin and Authorized Redirect URI
+After fixing these, Google login finally worked.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.Bookmarks Not Saving to Database
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+What happened:
+Clicking “Add Bookmark” didn’t show any error, but nothing was saved.
+Root cause:
+Supabase Row Level Security (RLS) was blocking inserts.
+How i fixed it:
+I created proper RLS policies to:
+Allow users to read their bookmarks
+Allow users to insert bookmarks
+Allow users to delete bookmarks
+This fixed the issue and secured the database.
 
-## Deploy on Vercel
+3.Google Login Failed After Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+What happened:
+Login worked locally but failed on the live site.
+Root cause:
+Production domain wasn’t added to OAuth settings.
+How i fixed it:
+Added the Vercel domain to:
+Google OAuth settings
+Supabase Site URL
+Then i changed urls.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+What I Learned
+--------------------------------------
+This project helped me understand:
+OAuth authentication flow
+Database security using RLS
+Deployment to production
+Managing environment variables
+Debugging real production issues
