@@ -1,7 +1,7 @@
 📌 Smart Bookmark App <br>
 A full-stack bookmark manager built with Next.js + Supabase + Google OAuth and deployed on Vercel.
 
-🌍 Live Demo /n
+🌍 Live Demo <br>
 🔗<a> https://smart-bookmark-app-black.vercel.app </a>
 
 📖 Project Overview /n
