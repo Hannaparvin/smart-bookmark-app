@@ -4,15 +4,15 @@ A full-stack bookmark manager built with Next.js + Supabase + Google OAuth and d
 🌍 Live Demo <br>
 🔗<a> https://smart-bookmark-app-black.vercel.app </a>
 
-📖 Project Overview /n
-This project is a secure bookmark manager where users can: /n
-Sign in using Google /n
-Add bookmarks (title + URL + Site logo)/n
-View personal bookmarks /n
-Delete bookmarks /n
-Get real-time updates /n
-Access their data securely from anywhere /n
-Each user can only see their own bookmarks thanks to Supabase Row Level Security (RLS). /n
+📖 Project Overview <br>
+This project is a secure bookmark manager where users can: <br>
+Sign in using Google <br>
+Add bookmarks (title + URL + Site logo)<br>
+View personal bookmarks <br>
+Delete bookmarks <br>
+Get real-time updates <br>
+Access their data securely from anywhere <br>
+Each user can only see their own bookmarks thanks to Supabase Row Level Security (RLS). <br>
 
 
 🛠 Tech Stack
@@ -25,54 +25,52 @@ Each user can only see their own bookmarks thanks to Supabase Row Level Security
 | Version Control | Git + GitHub                          |
 
 
-Problems Faced & How I Solved Them /n
----------------------------------------------- /n
-This section explains the real learning journey while building the app.
+Problems Faced & How I Solved Them 
+---------------------------------------------- 
+This section explains the real learning journey while building the app.<br>
 <br>
-1.Google OAuth Was Confusing /n
+1.Google OAuth Was Confusing <br>
 
-What happened:
-Google login didn’t work at first because OAuth setup involves both Google Cloud and Supabase settings.
-Things that confused me:
-Creating the OAuth consent screen
-Redirect URLs
-Difference between JavaScript Origins and Redirect URIs
-How I fixed it:
-After understanding the flow, I configured:
-Authorized JavaScript Origin and Authorized Redirect URI
-After fixing these, Google login finally worked.
+What happened:<br>
+Google login didn’t work at first because OAuth setup involves both Google Cloud and Supabase settings.<br>
+Things that confused me:<br>
+Creating the OAuth consent screen<br>
+Redirect URLs<br>
+Difference between JavaScript Origins and Redirect URIs<br>
+How I fixed it:<br>
+After understanding the flow, I configured:<br>
+Authorized JavaScript Origin and Authorized Redirect URI<br>
+After fixing these, Google login finally worked.<br>
 
-2.Bookmarks Not Saving to Database
+2.Bookmarks Not Saving to Database<br>
 
-What happened:
-Clicking “Add Bookmark” didn’t show any error, but nothing was saved.
-Root cause:
-Supabase Row Level Security (RLS) was blocking inserts.
-How i fixed it:
-I created proper RLS policies to:
-Allow users to read their bookmarks
-Allow users to insert bookmarks
-Allow users to delete bookmarks
-This fixed the issue and secured the database.
+What happened:<br>
+Clicking “Add Bookmark” didn’t show any error, but nothing was saved.<br>
+Root cause:<br>
+Supabase Row Level Security (RLS) was blocking inserts.<br>
+How i fixed it:<br>
+I created proper RLS policies to:<br>
+Allow users to read their bookmarks<br>
+Allow users to insert bookmarks<br>
+Allow users to delete bookmarks<br>
+This fixed the issue and secured the database.<br>
 
-3.Google Login Failed After Deployment
+3.Google Login Failed After Deployment<br>
 
-What happened:
-Login worked locally but failed on the live site.
-Root cause:
-Production domain wasn’t added to OAuth settings.
-How i fixed it:
-Added the Vercel domain to:
-Google OAuth settings
-Supabase Site URL
-Then i changed urls.
+What happened:<br>
+Login worked locally but failed on the live site.<br>
+How i fixed it:<br>
+Added the Vercel domain to:<br>
+Google OAuth settings<br>
+Supabase Site URL<br>
+Then i changed urls.<br>
 
 
 What I Learned
 --------------------------------------
-This project helped me understand:
-OAuth authentication flow
-Database security using RLS
-Deployment to production
-Managing environment variables
-Debugging real production issues
+This project helped me understand:<br>
+OAuth authentication flow<br>
+Database security using RLS<br>
+Deployment to production<br>
+Managing environment variables<br>
+Debugging real production issues<br>
