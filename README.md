@@ -1,4 +1,4 @@
-📌 Smart Bookmark App /n
+📌 Smart Bookmark App </n>
 A full-stack bookmark manager built with Next.js + Supabase + Google OAuth and deployed on Vercel.
 
 🌍 Live Demo /n
